@@ -9,16 +9,14 @@ import { MapPin } from 'lucide-react';
 const fetchParcels = async ({ queryKey }) => {
   const [_key, searchParams] = queryKey;
   
-  const url = new URL('http://localhost:5174/api/parcels');
+  let url = '/api/parcels?'
   
   if (searchParams.type === 'coords') {
-    url.searchParams.append('lat', searchParams.lat);
-    url.searchParams.append('lon', searchParams.lon);
+    url += `lat=${searchParams.lat}&lon=${searchParams.lon}`
   } else if (searchParams.type === 'address') {
-    console.log(searchParams.address)
-    url.searchParams.append('address', searchParams.address);
+    url += `address=${searchParams.address}`
   }
-
+  console.log(url.toString())
   const response = await fetch(url.toString());
   if (!response.ok) {
     throw new Error('Failed to fetch parcels');
