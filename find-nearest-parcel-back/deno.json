@@ -1,0 +1,15 @@
+{
+  "tasks": {
+    "dev": "deno run --watch --allow-sys --allow-env --allow-read --allow-net server.js"
+  },
+  "imports": {
+    "@hono/node-server": "npm:@hono/node-server@^1.19.9",
+    "@std/assert": "jsr:@std/assert@1",
+    "axios": "npm:axios@^1.13.2",
+    "cors": "npm:cors@^2.8.5",
+    "express": "npm:express@^5.2.1",
+    "hono": "npm:hono@^4.11.4",
+    "nodemon": "npm:nodemon@^3.1.11",
+    "serverless-http": "npm:serverless-http@^4.0.0"
+  }
+}
