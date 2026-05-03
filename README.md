@@ -21,5 +21,12 @@ I'm also using my favorite frameworks/libraries:
 
 ## Check out app
 
-I deployed this app on Deno Deploy platform, so you can check project by [clicking this link]().
+I deployed this app on Deno Deploy platform, so you can check project by [clicking this link](https://find-nearest-parcel.klr2002.deno.net).
 
+I decided to deploy because I'm aware that Deno is not as popular runtime as it should be. If you want to run this app on your machine:
+
+- install [Deno](https://deno.com)
+- In root catalog execute:
+    - ```deno install```
+    - ```deno run dev```
+- App should ran on localhost:5174
